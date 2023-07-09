@@ -28,7 +28,7 @@
             </div>
         </div>
         <div>
-            <div class="p-6 text-white text-3xl">
+            <div @click="useModalStore().toggleModal()" class="p-6 text-white text-3xl">
                 <PencilSquareIcon class="h-10 w-10" />
             </div>
         </div>
@@ -37,10 +37,6 @@
 
 <script setup>
 import { UsersIcon, ChatBubbleOvalLeftIcon, Bars3CenterLeftIcon, Cog6ToothIcon, UserGroupIcon, PencilSquareIcon } from '@heroicons/vue/24/solid'
-const emit = defineEmits(['toggle-visible'])
-
-const toggleVisible = (item) => {
-    emit('toggle-visible', item)
-}
+import { useModalStore } from '@/stores/modalStore' 
 
 </script>
