@@ -37,6 +37,8 @@
 
 <script setup>
 import { UsersIcon, ChatBubbleOvalLeftIcon, Bars3CenterLeftIcon, Cog6ToothIcon, UserGroupIcon, PencilSquareIcon } from '@heroicons/vue/24/solid'
-import { useModalStore } from '@/stores/modalStore' 
-
+import { useModalStore } from '@/stores/modalStore'
+const toggleVisible = (item) => {
+    document.querySelector(`.${item}`).classList.toggle('hidden')
+}
 </script>
